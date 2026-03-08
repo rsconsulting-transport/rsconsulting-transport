@@ -1,1 +1,1729 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>RS Consulting Transport</title>
+  <meta name="description" content="RS Consulting Transport – Fahrer Recruiting, Netzwerk & Kontakte und operative Lösungen für Transportunternehmen in Deutschland und Polen." />
+  <meta name="keywords" content="Fahrer Recruiting, Transportunternehmen, Spedition, Logistikdienstleister, Deutschland, Polen, operative Lösungen, Netzwerk, Transportberatung" />
+  <meta name="theme-color" content="#0f4c97" />
+
+  <meta property="og:title" content="RS Consulting Transport" />
+  <meta property="og:description" content="Fahrer Recruiting, Netzwerk & Kontakte und operative Lösungen für Transportunternehmen in Deutschland und Polen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rsconsulting-transport.de/" />
+  <meta property="og:image" content="https://rsconsulting-transport.de/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RS Consulting Transport" />
+  <meta name="twitter:description" content="Fahrer Recruiting, Netzwerk & Kontakte und operative Lösungen für Transportunternehmen." />
+  <meta name="twitter:image" content="https://rsconsulting-transport.de/og-image.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230f4c97'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='28' font-family='Arial' font-weight='700' fill='white'%3ERS%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root{
+      --bg:#f3f6fb;
+      --bg2:#edf3fa;
+      --white:#ffffff;
+      --navy:#0b2342;
+      --blue:#0f4c97;
+      --blue2:#2a6fd3;
+      --blue3:#4e8bf0;
+      --text:#1f2937;
+      --muted:#64748b;
+      --line:#dce6f1;
+      --shadow:0 16px 38px rgba(11,35,66,.08);
+      --shadow2:0 24px 60px rgba(15,76,151,.16);
+      --success:#25D366;
+      --max:1180px;
+      --radius:26px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(42,111,211,.05), transparent 22%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    button,input,textarea,select{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 28px));
+      margin:0 auto;
+    }
+
+    .fade-in{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .55s ease, transform .55s ease;
+    }
+    .fade-in.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1300;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(15,76,151,.08);
+      box-shadow:0 6px 18px rgba(0,0,0,.03);
+    }
+
+    .top-controls{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:12px 18px;
+      background:#fff;
+    }
+
+    .left-head{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex:1;
+      min-width:0;
+    }
+
+    .hamburger{
+      width:52px;
+      height:52px;
+      border:none;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      color:#fff;
+      font-size:20px;
+      cursor:pointer;
+      box-shadow:0 10px 22px rgba(15,76,151,.18);
+      transition:.22s ease;
+      flex:0 0 auto;
+    }
+    .hamburger:hover{transform:translateY(-2px)}
+
+    .header-logo{
+      flex:1;
+      min-width:0;
+      display:flex;
+      align-items:center;
+    }
+
+    .header-logo img{
+      width:100%;
+      max-width:360px;
+      height:40px;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .lang-switch{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      flex:0 0 auto;
+    }
+
+    .lang-btn{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      border-radius:12px;
+      padding:10px 14px;
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s ease;
+      min-width:56px;
+    }
+    .lang-btn:hover,
+    .lang-btn.active{
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 10px 22px rgba(15,76,151,.18);
+    }
+
+    .quick-bar{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:nowrap;
+      padding:12px 14px 14px;
+      border-top:1px solid rgba(15,76,151,.08);
+      background:#fff;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+    .quick-bar::-webkit-scrollbar{display:none}
+
+    .quick-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:14px;
+      background:#f7fbff;
+      border:1px solid var(--line);
+      font-weight:700;
+      color:var(--navy);
+      transition:.2s ease;
+      white-space:nowrap;
+      flex:0 0 auto;
+      box-shadow:0 6px 16px rgba(11,35,66,.04);
+    }
+    .quick-link:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 20px rgba(11,35,66,.06);
+    }
+    .quick-link.whatsapp{
+      background:#eafff2;
+      border-color:#c8f1d4;
+    }
+
+    .nav-links{
+      display:none;
+      flex-direction:column;
+      gap:10px;
+      padding:0 18px 18px;
+      background:#fff;
+      border-top:1px solid rgba(15,76,151,.08);
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{
+      font-size:15px;
+      font-weight:700;
+      color:var(--muted);
+      padding:8px 2px;
+    }
+    .nav-links a:hover{color:var(--blue)}
+
+    .hero{
+      padding:18px 0 18px;
+    }
+
+    .hero-wrap{
+      position:relative;
+      overflow:hidden;
+      border-radius:32px;
+      box-shadow:var(--shadow2);
+      background:linear-gradient(135deg,#07182d 0%, #0f2f54 42%, #1b58a6 100%);
+      isolation:isolate;
+    }
+
+    .hero-wrap::before{
+      content:"";
+      position:absolute;
+      inset:-10%;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,.05) 0,
+          rgba(255,255,255,.05) 1px,
+          transparent 1px,
+          transparent 48px
+        );
+      animation:gridMove 18s linear infinite;
+      opacity:.28;
+      z-index:0;
+    }
+
+    .hero-wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(255,255,255,.16), transparent 18%),
+        radial-gradient(circle at 82% 16%, rgba(255,255,255,.10), transparent 18%);
+      z-index:0;
+    }
+
+    .orb{
+      position:absolute;
+      border-radius:999px;
+      z-index:0;
+      opacity:.16;
+      animation:floatOrb 10s ease-in-out infinite;
+    }
+    .orb1{
+      width:420px;
+      height:420px;
+      right:-120px;
+      top:-120px;
+      background:radial-gradient(circle, #8cbfff, transparent 65%);
+    }
+    .orb2{
+      width:240px;
+      height:240px;
+      left:-50px;
+      bottom:-40px;
+      background:radial-gradient(circle, #79adff, transparent 65%);
+      animation-delay:2s;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      align-items:stretch;
+    }
+
+    .hero-copy{
+      padding:54px 46px;
+      color:#fff;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.06);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      white-space:nowrap;
+    }
+
+    .hero p{
+      margin:0;
+      max-width:720px;
+      font-size:22px;
+      line-height:1.6;
+      color:rgba(255,255,255,.94);
+    }
+
+    .hero-note{
+      margin-top:14px;
+      color:rgba(255,255,255,.84);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .hero-side{
+      position:relative;
+      min-height:100%;
+    }
+
+    .hero-panel{
+      position:absolute;
+      right:40px;
+      top:42px;
+      width:320px;
+      border-radius:24px;
+      padding:24px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 18px 44px rgba(0,0,0,.12);
+      color:#fff;
+      backdrop-filter:blur(10px);
+    }
+    .hero-panel h3{
+      margin:0 0 10px;
+      font-size:24px;
+      line-height:1.2;
+    }
+    .hero-panel p{
+      margin:0;
+      font-size:15px;
+      line-height:1.6;
+      color:rgba(255,255,255,.88);
+    }
+
+    .hero-bars{
+      position:absolute;
+      left:50px;
+      bottom:48px;
+      display:flex;
+      align-items:flex-end;
+      gap:14px;
+      height:160px;
+    }
+    .hero-bars span{
+      width:40px;
+      border-radius:14px 14px 0 0;
+      background:linear-gradient(180deg, rgba(255,255,255,.56), rgba(255,255,255,.16));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+      animation:pulseHeight 4s ease-in-out infinite;
+    }
+    .hero-bars span:nth-child(1){height:58px; animation-delay:0s;}
+    .hero-bars span:nth-child(2){height:96px; animation-delay:.4s;}
+    .hero-bars span:nth-child(3){height:132px; animation-delay:.8s;}
+    .hero-bars span:nth-child(4){height:88px; animation-delay:1.2s;}
+
+    .hero-ring{
+      position:absolute;
+      width:230px;
+      height:230px;
+      right:20px;
+      bottom:20px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      opacity:.45;
+      animation:spin 18s linear infinite;
+    }
+    .hero-ring::before,
+    .hero-ring::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      inset:24px;
+    }
+    .hero-ring::after{inset:52px}
+
+    .action-box,
+    .box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .action-box{
+      padding:28px 24px;
+      margin-top:14px;
+    }
+    .action-box h2{
+      margin:0 0 20px;
+      text-align:center;
+      color:var(--navy);
+      font-size:clamp(28px,5vw,42px);
+      line-height:1.15;
+    }
+    .action-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      max-width:760px;
+      margin:0 auto;
+    }
+    .action-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:16px 18px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      color:#fff !important;
+      font-weight:800;
+      font-size:18px;
+      box-shadow:0 12px 24px rgba(15,76,151,.15);
+      transition:.22s ease;
+      text-align:center;
+    }
+    .action-btn:hover{transform:translateY(-2px)}
+    .action-btn.whatsapp{background:linear-gradient(135deg,#25d366,#3ccf72)}
+
+    .section{
+      padding:34px 0 8px;
+    }
+    .section-header{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .section-header h2{
+      margin:0 0 12px;
+      font-size:clamp(30px,5vw,44px);
+      line-height:1.1;
+      color:var(--navy);
+    }
+    .section-header p{
+      margin:0 auto;
+      max-width:760px;
+      font-size:18px;
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .accordion-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .accordion-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:.22s ease;
+    }
+    .accordion-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 20px 38px rgba(11,35,66,.10);
+    }
+
+    .accordion-head{
+      padding:24px 20px;
+      text-align:center;
+    }
+
+    .icon{
+      width:72px;
+      height:72px;
+      border-radius:20px;
+      margin:0 auto 14px;
+      background:linear-gradient(135deg,#eef4fb,#d9e6f8);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--blue);
+      font-size:28px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+    }
+
+    .accordion-head h3{
+      margin:0 0 10px;
+      font-size:23px;
+      line-height:1.25;
+      color:var(--navy);
+    }
+    .accordion-head p{
+      margin:0;
+      font-size:15px;
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .toggle-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+      padding:13px 18px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 10px 20px rgba(15,76,151,.16);
+      transition:.22s ease;
+    }
+    .toggle-btn:hover{transform:translateY(-2px)}
+    .toggle-btn i{transition:transform .25s ease}
+    .accordion-card.open .toggle-btn i{transform:rotate(180deg)}
+
+    .accordion-body{
+      display:none;
+      padding:0 20px 24px;
+      animation:fadeUp .22s ease;
+    }
+    .accordion-card.open .accordion-body{display:block}
+
+    .inner-list{
+      display:grid;
+      gap:12px;
+      margin-top:4px;
+    }
+    .inner-item{
+      padding:14px 16px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      color:var(--text);
+      line-height:1.7;
+      font-size:15px;
+      box-shadow:0 6px 16px rgba(11,35,66,.04);
+    }
+
+    .box{
+      padding:28px 24px;
+    }
+
+    .simple-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .simple-item{
+      padding:16px 18px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      color:var(--navy);
+      font-weight:700;
+      text-align:center;
+      box-shadow:0 6px 16px rgba(11,35,66,.04);
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:24px;
+      align-items:start;
+    }
+    .contact-box,
+    .form-box{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .contact-box h3,
+    .form-box h3{
+      margin:0 0 12px;
+      font-size:28px;
+      color:var(--navy);
+    }
+    .contact-box p,
+    .form-box p{
+      margin:0 0 16px;
+      line-height:1.8;
+      color:var(--muted);
+    }
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-item{
+      padding:14px 16px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      font-weight:700;
+      color:var(--text);
+      word-break:break-word;
+    }
+
+    form{display:grid;gap:14px}
+    label{
+      display:block;
+      margin-bottom:6px;
+      font-size:14px;
+      font-weight:700;
+      color:var(--navy);
+    }
+    input,textarea,select{
+      width:100%;
+      padding:14px 15px;
+      border:1px solid #ccd7e6;
+      border-radius:14px;
+      background:#fff;
+      color:var(--text);
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    input:focus,textarea:focus,select:focus{
+      outline:none;
+      border-color:rgba(42,111,211,.45);
+      box-shadow:0 0 0 4px rgba(42,111,211,.10);
+    }
+    textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 22px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 12px 24px rgba(15,76,151,.15);
+      transition:.22s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+
+    .faq-item{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      text-align:left;
+    }
+    .faq-item h3{
+      margin:0 0 10px;
+      font-size:20px;
+      color:var(--navy);
+      line-height:1.35;
+    }
+    .faq-item p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .footer{
+      margin-top:56px;
+      background:linear-gradient(135deg,#081426,#0d1f39 48%, #10284a 100%);
+      color:#d7deea;
+      padding:44px 0;
+      position:relative;
+      overflow:hidden;
+    }
+    .footer::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:999px;
+      right:-180px;
+      top:-180px;
+      background:radial-gradient(circle, rgba(255,255,255,.08), transparent 65%);
+    }
+    .footer-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    .footer h4{
+      margin:0 0 12px;
+      font-size:21px;
+      color:#fff;
+    }
+    .footer p{
+      margin:0;
+      line-height:1.9;
+    }
+    .footer small{
+      display:block;
+      margin-top:24px;
+      color:#93a2b8;
+      position:relative;
+    }
+    .trust-line{
+      margin-top:10px;
+      color:#a9b7ca;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:1350;
+      width:62px;
+      height:62px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#20c75a,#15a94a);
+      color:#fff;
+      font-size:30px;
+      box-shadow:0 18px 34px rgba(21,169,74,.35);
+      transition:.25s ease;
+    }
+    .whatsapp-float:hover{
+      transform:translateY(-3px) scale(1.04);
+    }
+
+    @keyframes gridMove{
+      from{transform:translateX(0)}
+      to{transform:translateX(48px)}
+    }
+    @keyframes floatOrb{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(18px)}
+    }
+    @keyframes spin{
+      from{transform:rotate(0deg)}
+      to{transform:rotate(360deg)}
+    }
+    @keyframes pulseHeight{
+      0%,100%{transform:scaleY(1)}
+      50%{transform:scaleY(1.08)}
+    }
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(18px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+
+    @media (max-width:1100px){
+      .hero-inner,
+      .accordion-grid,
+      .contact-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+      .simple-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-copy{padding:48px 28px}
+      .hero-side{min-height:310px}
+      .hero-panel{right:24px;top:28px}
+      .hero-bars{left:28px;bottom:26px}
+    }
+
+    @media (max-width:760px){
+      .top-controls{padding:12px 14px}
+      .left-head{gap:10px}
+      .header-logo img{
+        max-width:none;
+        height:34px;
+      }
+      .quick-bar{
+        justify-content:flex-start;
+        gap:10px;
+        padding:10px 12px 12px;
+      }
+      .quick-link{
+        padding:10px 12px;
+        font-size:14px;
+      }
+      .hero p{font-size:18px}
+      .hero-badge{
+        font-size:11px;
+        letter-spacing:.03em;
+        white-space:normal;
+      }
+      .hero-panel{
+        left:20px;
+        right:20px;
+        width:auto;
+      }
+      .hero-bars{display:none}
+      .action-grid,
+      .simple-grid{
+        grid-template-columns:1fr;
+      }
+      .action-btn{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="top-controls">
+      <div class="left-head">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="header-logo">
+          <img src="logo.png" alt="RS Consulting Logo">
+        </div>
+      </div>
+
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('pl')">PL</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+
+    <div class="quick-bar">
+      <a href="tel:+4917620024555" class="quick-link">
+        <i class="fa-solid fa-phone"></i>
+        <span>+49 176 200 24 555</span>
+      </a>
+
+      <a href="mailto:s.rog@rsconsulting-transport.de" class="quick-link">
+        <i class="fa-solid fa-envelope"></i>
+        <span>E-Mail</span>
+      </a>
+
+      <a href="https://wa.me/4917620024555" target="_blank" rel="noopener" class="quick-link whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+
+    <nav class="nav-links" id="mobileMenu">
+      <a href="#cards" data-i18n="nav_services">Leistungen</a>
+      <a href="#regionen" data-i18n="nav_regions">Regionen</a>
+      <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
+      <a href="#analyse" data-i18n="nav_analysis">Analyse</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="orb orb1"></div>
+          <div class="orb orb2"></div>
+
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <span class="hero-badge">
+                <i class="fa-solid fa-road"></i>
+                <span data-i18n="hero_badge">TRANSPORT · RECRUITING · NETZWERK</span>
+              </span>
+
+              <p data-i18n="hero_text">
+                Wir unterstützen Transportunternehmen bei <strong>Fahrer Recruiting</strong>, Netzwerkaufbau und pragmatischen Lösungen im operativen Alltag.
+              </p>
+
+              <div class="hero-note" data-i18n="hero_note">
+                Praktisch, direkt und ohne unnötige Komplexität.
+              </div>
+            </div>
+
+            <div class="hero-side">
+              <div class="hero-panel">
+                <h3 data-i18n="hero_box_title">Konkrete Unterstützung</h3>
+                <p data-i18n="hero_box_text">Für Transportfirmen, die klare Lösungen statt leerer Theorie suchen.</p>
+              </div>
+
+              <div class="hero-bars">
+                <span></span><span></span><span></span><span></span>
+              </div>
+
+              <div class="hero-ring"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-box fade-in">
+          <h2 data-i18n="action_title">Brauchen Sie Fahrer oder Kontakte in der Transportbranche?</h2>
+
+          <div class="action-grid">
+            <a href="tel:+4917620024555" class="action-btn">
+              <i class="fa-solid fa-phone"></i>
+              <span data-i18n="action_call">Anrufen</span>
+            </a>
+
+            <a href="https://wa.me/4917620024555" target="_blank" rel="noopener" class="action-btn whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+            <a href="#kontakt" class="action-btn">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-i18n="action_contact">Schneller Kontakt</span>
+            </a>
+
+            <a href="#analyse" class="action-btn">
+              <i class="fa-solid fa-chart-column"></i>
+              <span data-i18n="action_analysis">Kostenlose Analyse</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="section fade-in">
+      <div class="container">
+        <div class="accordion-grid">
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-id-card-clip"></i></div>
+              <h3 data-i18n="card1_title">Fahrer Recruiting</h3>
+              <p data-i18n="card1_text">Unterstützung bei der Suche nach passenden Fahrern.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card1_body1">Gezielte Suche nach passenden Kandidaten statt breiter Streuung.</div>
+                <div class="inner-item" data-i18n="card1_body2">Strukturierte Vorauswahl relevanter Profile.</div>
+                <div class="inner-item" data-i18n="card1_body3">Praktische Unterstützung beim Erstkontakt und bei den ersten Schritten im Recruiting-Prozess.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h3 data-i18n="card2_title">Netzwerk und Kontakte</h3>
+              <p data-i18n="card2_text">Zugang zu relevanten Kontakten in der Branche.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card2_body1">Zugang zu relevanten Branchenkontakten und Ansprechpartnern.</div>
+                <div class="inner-item" data-i18n="card2_body2">Vermittlung gezielter Kontakte statt Zufallslösungen.</div>
+                <div class="inner-item" data-i18n="card2_body3">Netzwerkaufbau mit Fokus auf Transport, Logistik und internationale Fahrerquellen.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-gears"></i></div>
+              <h3 data-i18n="card3_title">Operative Lösungen</h3>
+              <p data-i18n="card3_text">Praktische Unterstützung im Transportalltag.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card3_body1">Analyse von Engpässen, Abläufen und Strukturen.</div>
+                <div class="inner-item" data-i18n="card3_body2">Pragmatische Lösungen für reale Probleme im operativen Alltag.</div>
+                <div class="inner-item" data-i18n="card3_body3">Fokus auf umsetzbare Verbesserungen statt theoretischer Konzepte.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+              <h3 data-i18n="card4_title">Typische Probleme</h3>
+              <p data-i18n="card4_text">Die häufigsten Belastungen im Transportbetrieb.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card4_body1">Fahrermangel und steigende Personalkosten.</div>
+                <div class="inner-item" data-i18n="card4_body2">Hohe Fluktuation, Sprachbarrieren und Missverständnisse im Fahrerteam.</div>
+                <div class="inner-item" data-i18n="card4_body3">Schäden an Fahrzeugen, organisatorischer Druck und Zeitverlust durch ineffiziente Prozesse.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h3 data-i18n="card5_title">Unser Prinzip</h3>
+              <p data-i18n="card5_text">Praxisnah, direkt und mit echtem Bezug zum Alltag.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card5_body1">Praxis statt Theorie – wir denken nicht nur in Präsentationen, sondern in realen Abläufen.</div>
+                <div class="inner-item" data-i18n="card5_body2">Wir kennen die Dynamik im Umgang mit Fahrpersonal und wissen, wie wichtig klare Kommunikation und passende Strukturen sind.</div>
+                <div class="inner-item" data-i18n="card5_body3">„Wir beraten nicht nur – wir arbeiten im Prozess.“</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3 data-i18n="card6_title">Beratung</h3>
+              <p data-i18n="card6_text">Beratung für Transportunternehmen in Deutschland.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card6_body1">Die Transportbranche steht vor großen Herausforderungen: Fahrermangel, steigende Kosten und hohe Fluktuation.</div>
+                <div class="inner-item" data-i18n="card6_body2">Viele Unternehmen kämpfen zusätzlich mit Sprachbarrieren, Schäden und ineffizienten Abläufen.</div>
+                <div class="inner-item" data-i18n="card6_body3">Wir helfen dabei, Strukturen zu verbessern, Prozesse zu stabilisieren und praktikable Lösungen zu entwickeln.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-users"></i></div>
+              <h3 data-i18n="card7_title">Für wen wir arbeiten</h3>
+              <p data-i18n="card7_text">Für Unternehmen mit Bedarf an praktischer Unterstützung.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card7_body1">Transportunternehmen, die Fahrer suchen und ihre operative Struktur stärken möchten.</div>
+                <div class="inner-item" data-i18n="card7_body2">Speditionen, die langfristige Lösungen für Personal- und Organisationsprobleme suchen.</div>
+                <div class="inner-item" data-i18n="card7_body3">Logistikdienstleister, die Prozesse effizienter gestalten und operative Engpässe reduzieren möchten.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-card">
+            <div class="accordion-head">
+              <div class="icon"><i class="fa-solid fa-route"></i></div>
+              <h3 data-i18n="card8_title">Wie wir arbeiten</h3>
+              <p data-i18n="card8_text">Ein klarer, praxisnaher Ablauf.</p>
+              <button class="toggle-btn" onclick="toggleCard(this)">
+                <span data-i18n="more_btn">Mehr erfahren</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="inner-list">
+                <div class="inner-item" data-i18n="card8_body1">Erstgespräch – wir analysieren die Ausgangssituation und definieren den tatsächlichen Bedarf.</div>
+                <div class="inner-item" data-i18n="card8_body2">Analyse – wir betrachten Personalthemen, Kontakte, Abläufe und operative Engpässe.</div>
+                <div class="inner-item" data-i18n="card8_body3">Umsetzung – wir entwickeln eine pragmatische Lösung, die zur Struktur des Unternehmens passt und im Alltag funktioniert.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="regionen" class="section fade-in">
+      <div class="container">
+        <div class="box">
+          <div class="section-header">
+            <h2 data-i18n="regions_title">Regionen</h2>
+            <p data-i18n="regions_text"><strong>Deutschlandweit tätig.</strong> Größere operative Projekte übernehmen wir bevorzugt im Raum Berlin, Leipzig und Dresden. Auch Projekte in anderen Regionen Deutschlands sowie in Polen sind grundsätzlich möglich.</p>
+          </div>
+
+          <div class="simple-grid">
+            <div class="simple-item" data-i18n="region1_title">Berlin</div>
+            <div class="simple-item" data-i18n="region2_title">Leipzig</div>
+            <div class="simple-item" data-i18n="region3_title">Dresden</div>
+            <div class="simple-item" data-i18n="region4_title">Polen</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="contact_title">Kontakt</h2>
+          <p data-i18n="contact_text">Schnell, direkt und unkompliziert.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-box">
+            <h3 data-i18n="contact_direct">Direkter Kontakt</h3>
+            <p data-i18n="contact_direct_text">Telefonisch, per E-Mail oder direkt über WhatsApp.</p>
+
+            <div class="contact-list">
+              <div class="contact-item"><i class="fa-solid fa-envelope"></i> s.rog@rsconsulting-transport.de</div>
+              <div class="contact-item"><i class="fa-solid fa-phone"></i> +49 176 200 24 555</div>
+              <div class="contact-item"><i class="fa-solid fa-phone"></i> +48 889 966 455</div>
+              <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Schmelzstrasse 17, 02953 Bad Muskau</div>
+              <div class="contact-item" data-i18n="contact_scope">Deutschlandweit tätig – operative Schwerpunkte vor allem im Raum Berlin, Leipzig und Dresden sowie in Polen.</div>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <h3 data-i18n="contact_form_title">Schneller Kontakt</h3>
+            <p data-i18n="contact_form_subtitle">Sie möchten uns direkt schreiben? Nutzen Sie einfach das Kontaktformular.</p>
+
+            <form action="https://formspree.io/f/xwvrpdaw" method="POST">
+              <input type="hidden" name="formularz_typ" value="Kontaktformular">
+
+              <div>
+                <label for="name" data-i18n="form_name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div>
+                <label for="company" data-i18n="form_company">Firma</label>
+                <input type="text" id="company" name="company">
+              </div>
+
+              <div>
+                <label for="phone" data-i18n="form_phone">Telefon</label>
+                <input type="text" id="phone" name="telefon">
+              </div>
+
+              <div>
+                <label for="email" data-i18n="form_email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div>
+                <label for="message" data-i18n="form_message">Nachricht</label>
+                <textarea id="message" name="nachricht"></textarea>
+              </div>
+
+              <button type="submit" class="btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="form_send">Nachricht senden</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analyse" class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="analysis_title">Kostenlose Analyse</h2>
+          <p data-i18n="analysis_text">Beantworten Sie kurz ein paar Fragen – wir melden uns zeitnah. 100% vertraulich.</p>
+        </div>
+
+        <div class="box">
+          <form action="https://formspree.io/f/xwvrpdaw" method="POST">
+            <input type="hidden" name="formularz_typ" value="Erst-Analyse">
+
+            <div>
+              <label for="an_company" data-i18n="analysis_company">Firma (optional – auch anonym möglich)</label>
+              <input type="text" id="an_company" name="firma" placeholder="Firmenname oder anonym">
+            </div>
+
+            <div>
+              <label for="an_fleet" data-i18n="analysis_fleet">Wie viele Fahrzeuge hat Ihr Unternehmen?</label>
+              <select id="an_fleet" name="flotte">
+                <option>1–5 Fahrzeuge</option>
+                <option>6–20 Fahrzeuge</option>
+                <option>21–50 Fahrzeuge</option>
+                <option>50+ Fahrzeuge</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="an_driver" data-i18n="analysis_driver">Haben Sie aktuell Probleme mit Fahrermangel?</label>
+              <select id="an_driver" name="fahrermangel">
+                <option>Ja</option>
+                <option>Teilweise</option>
+                <option>Nein</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="an_problem" data-i18n="analysis_problem">Was ist aktuell Ihre größte Herausforderung?</label>
+              <select id="an_problem" name="problem">
+                <option>Fahrermangel</option>
+                <option>Hohe Kosten</option>
+                <option>Organisation / Disposition</option>
+                <option>Schäden / Fahrerprobleme</option>
+                <option>Anderes</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="an_location" data-i18n="analysis_location">Wo befindet sich Ihr Unternehmen?</label>
+              <input type="text" id="an_location" name="standort" placeholder="Stadt / Region">
+            </div>
+
+            <div>
+              <label for="an_name" data-i18n="analysis_name">Name</label>
+              <input type="text" id="an_name" name="name" required>
+            </div>
+
+            <div>
+              <label for="an_phone" data-i18n="analysis_phone">Telefon</label>
+              <input type="text" id="an_phone" name="telefon">
+            </div>
+
+            <div>
+              <label for="an_email" data-i18n="analysis_email">E-Mail</label>
+              <input type="email" id="an_email" name="email" required>
+            </div>
+
+            <div>
+              <label for="an_message" data-i18n="analysis_message">Beschreiben Sie kurz Ihre Situation</label>
+              <textarea id="an_message" name="nachricht"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span data-i18n="analysis_send">Kostenlose Analyse anfragen</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="faq_title">Häufig gestellte Fragen</h2>
+          <p data-i18n="faq_text">Kurze Antworten auf typische Fragen rund um unsere Zusammenarbeit.</p>
+        </div>
+
+        <div class="accordion-grid">
+          <div class="faq-item">
+            <h3 data-i18n="faq1_q">Wie funktioniert Fahrer Recruiting?</h3>
+            <p data-i18n="faq1_a">Wir unterstützen Transportunternehmen bei der Suche nach passenden Fahrern. Dabei nutzen wir unser Netzwerk sowie verschiedene Recruiting-Kanäle innerhalb der Transportbranche.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 data-i18n="faq2_q">Arbeiten Sie nur in Deutschland?</h3>
+            <p data-i18n="faq2_a">Wir arbeiten deutschlandweit. Größere operative Projekte übernehmen wir vor allem im Raum Berlin, Leipzig und Dresden sowie in Polen.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 data-i18n="faq3_q">Mit welchen Unternehmen arbeiten Sie zusammen?</h3>
+            <p data-i18n="faq3_a">Unsere Dienstleistungen richten sich vor allem an Transportunternehmen, Speditionen und Logistikdienstleister.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 data-i18n="faq4_q">Wie läuft eine Zusammenarbeit ab?</h3>
+            <p data-i18n="faq4_a">In einem ersten Gespräch besprechen wir Ihre Situation und prüfen gemeinsam, welche Unterstützung sinnvoll sein kann.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 data-i18n="footer_impressum">Impressum</h4>
+        <p>
+          <span data-i18n="footer_owner">Inhaber</span>: Szymon Rog<br />
+          Schmelzstrasse 17<br />
+          02953 Bad Muskau<br />
+          St-Nr.: 207/263/04751
+        </p>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer_contact">Kontakt</h4>
+        <p>
+          E-Mail: s.rog@rsconsulting-transport.de<br><br>
+          Deutschland:<br>
+          +49 176 200 24 555<br><br>
+          Polska:<br>
+          +48 889 966 455
+        </p>
+        <div class="trust-line" data-i18n="footer_trust">
+          Deutschlandweit tätig – mit Netzwerk in Deutschland, Polen und internationalen Fahrerquellen.
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <small>© RS Consulting Transport</small>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/4917620024555" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function toggleCard(button){
+      const card = button.closest('.accordion-card');
+      card.classList.toggle('open');
+    }
+
+    const translations = {
+      de: {
+        nav_services:"Leistungen",
+        nav_regions:"Regionen",
+        nav_contact:"Kontakt",
+        nav_analysis:"Analyse",
+        nav_faq:"FAQ",
+
+        hero_badge:"TRANSPORT · RECRUITING · NETZWERK",
+        hero_text:"Wir unterstützen Transportunternehmen bei <strong>Fahrer Recruiting</strong>, Netzwerkaufbau und pragmatischen Lösungen im operativen Alltag.",
+        hero_note:"Praktisch, direkt und ohne unnötige Komplexität.",
+        hero_box_title:"Konkrete Unterstützung",
+        hero_box_text:"Für Transportfirmen, die klare Lösungen statt leerer Theorie suchen.",
+
+        action_title:"Brauchen Sie Fahrer oder Kontakte in der Transportbranche?",
+        action_call:"Anrufen",
+        action_contact:"Schneller Kontakt",
+        action_analysis:"Kostenlose Analyse",
+
+        more_btn:"Mehr erfahren",
+
+        card1_title:"Fahrer Recruiting",
+        card1_text:"Unterstützung bei der Suche nach passenden Fahrern.",
+        card1_body1:"Gezielte Suche nach passenden Kandidaten statt breiter Streuung.",
+        card1_body2:"Strukturierte Vorauswahl relevanter Profile.",
+        card1_body3:"Praktische Unterstützung beim Erstkontakt und bei den ersten Schritten im Recruiting-Prozess.",
+
+        card2_title:"Netzwerk und Kontakte",
+        card2_text:"Zugang zu relevanten Kontakten in der Branche.",
+        card2_body1:"Zugang zu relevanten Branchenkontakten und Ansprechpartnern.",
+        card2_body2:"Vermittlung gezielter Kontakte statt Zufallslösungen.",
+        card2_body3:"Netzwerkaufbau mit Fokus auf Transport, Logistik und internationale Fahrerquellen.",
+
+        card3_title:"Operative Lösungen",
+        card3_text:"Praktische Unterstützung im Transportalltag.",
+        card3_body1:"Analyse von Engpässen, Abläufen und Strukturen.",
+        card3_body2:"Pragmatische Lösungen für reale Probleme im operativen Alltag.",
+        card3_body3:"Fokus auf umsetzbare Verbesserungen statt theoretischer Konzepte.",
+
+        card4_title:"Typische Probleme",
+        card4_text:"Die häufigsten Belastungen im Transportbetrieb.",
+        card4_body1:"Fahrermangel und steigende Personalkosten.",
+        card4_body2:"Hohe Fluktuation, Sprachbarrieren und Missverständnisse im Fahrerteam.",
+        card4_body3:"Schäden an Fahrzeugen, organisatorischer Druck und Zeitverlust durch ineffiziente Prozesse.",
+
+        card5_title:"Unser Prinzip",
+        card5_text:"Praxisnah, direkt und mit echtem Bezug zum Alltag.",
+        card5_body1:"Praxis statt Theorie – wir denken nicht nur in Präsentationen, sondern in realen Abläufen.",
+        card5_body2:"Wir kennen die Dynamik im Umgang mit Fahrpersonal und wissen, wie wichtig klare Kommunikation und passende Strukturen sind.",
+        card5_body3:"„Wir beraten nicht nur – wir arbeiten im Prozess.“",
+
+        card6_title:"Beratung",
+        card6_text:"Beratung für Transportunternehmen in Deutschland.",
+        card6_body1:"Die Transportbranche steht vor großen Herausforderungen: Fahrermangel, steigende Kosten und hohe Fluktuation.",
+        card6_body2:"Viele Unternehmen kämpfen zusätzlich mit Sprachbarrieren, Schäden und ineffizienten Abläufen.",
+        card6_body3:"Wir helfen dabei, Strukturen zu verbessern, Prozesse zu stabilisieren und praktikable Lösungen zu entwickeln.",
+
+        card7_title:"Für wen wir arbeiten",
+        card7_text:"Für Unternehmen mit Bedarf an praktischer Unterstützung.",
+        card7_body1:"Transportunternehmen, die Fahrer suchen und ihre operative Struktur stärken möchten.",
+        card7_body2:"Speditionen, die langfristige Lösungen für Personal- und Organisationsprobleme suchen.",
+        card7_body3:"Logistikdienstleister, die Prozesse effizienter gestalten und operative Engpässe reduzieren möchten.",
+
+        card8_title:"Wie wir arbeiten",
+        card8_text:"Ein klarer, praxisnaher Ablauf.",
+        card8_body1:"Erstgespräch – wir analysieren die Ausgangssituation und definieren den tatsächlichen Bedarf.",
+        card8_body2:"Analyse – wir betrachten Personalthemen, Kontakte, Abläufe und operative Engpässe.",
+        card8_body3:"Umsetzung – wir entwickeln eine pragmatische Lösung, die zur Struktur des Unternehmens passt und im Alltag funktioniert.",
+
+        regions_title:"Regionen",
+        regions_text:"<strong>Deutschlandweit tätig.</strong> Größere operative Projekte übernehmen wir bevorzugt im Raum Berlin, Leipzig und Dresden. Auch Projekte in anderen Regionen Deutschlands sowie in Polen sind grundsätzlich möglich.",
+        region1_title:"Berlin",
+        region2_title:"Leipzig",
+        region3_title:"Dresden",
+        region4_title:"Polen",
+
+        contact_title:"Kontakt",
+        contact_text:"Schnell, direkt und unkompliziert.",
+        contact_direct:"Direkter Kontakt",
+        contact_direct_text:"Telefonisch, per E-Mail oder direkt über WhatsApp.",
+        contact_scope:"Deutschlandweit tätig – operative Schwerpunkte vor allem im Raum Berlin, Leipzig und Dresden sowie in Polen.",
+        contact_form_title:"Schneller Kontakt",
+        contact_form_subtitle:"Sie möchten uns direkt schreiben? Nutzen Sie einfach das Kontaktformular.",
+        form_name:"Name",
+        form_company:"Firma",
+        form_phone:"Telefon",
+        form_email:"E-Mail",
+        form_message:"Nachricht",
+        form_send:"Nachricht senden",
+
+        analysis_title:"Kostenlose Analyse",
+        analysis_text:"Beantworten Sie kurz ein paar Fragen – wir melden uns zeitnah. 100% vertraulich.",
+        analysis_company:"Firma (optional – auch anonym möglich)",
+        analysis_fleet:"Wie viele Fahrzeuge hat Ihr Unternehmen?",
+        analysis_driver:"Haben Sie aktuell Probleme mit Fahrermangel?",
+        analysis_problem:"Was ist aktuell Ihre größte Herausforderung?",
+        analysis_location:"Wo befindet sich Ihr Unternehmen?",
+        analysis_name:"Name",
+        analysis_phone:"Telefon",
+        analysis_email:"E-Mail",
+        analysis_message:"Beschreiben Sie kurz Ihre Situation",
+        analysis_send:"Kostenlose Analyse anfragen",
+
+        faq_title:"Häufig gestellte Fragen",
+        faq_text:"Kurze Antworten auf typische Fragen rund um unsere Zusammenarbeit.",
+        faq1_q:"Wie funktioniert Fahrer Recruiting?",
+        faq1_a:"Wir unterstützen Transportunternehmen bei der Suche nach passenden Fahrern. Dabei nutzen wir unser Netzwerk sowie verschiedene Recruiting-Kanäle innerhalb der Transportbranche.",
+        faq2_q:"Arbeiten Sie nur in Deutschland?",
+        faq2_a:"Wir arbeiten deutschlandweit. Größere operative Projekte übernehmen wir vor allem im Raum Berlin, Leipzig und Dresden sowie in Polen.",
+        faq3_q:"Mit welchen Unternehmen arbeiten Sie zusammen?",
+        faq3_a:"Unsere Dienstleistungen richten sich vor allem an Transportunternehmen, Speditionen und Logistikdienstleister.",
+        faq4_q:"Wie läuft eine Zusammenarbeit ab?",
+        faq4_a:"In einem ersten Gespräch besprechen wir Ihre Situation und prüfen gemeinsam, welche Unterstützung sinnvoll sein kann.",
+
+        footer_impressum:"Impressum",
+        footer_owner:"Inhaber",
+        footer_contact:"Kontakt",
+        footer_trust:"Deutschlandweit tätig – mit Netzwerk in Deutschland, Polen und internationalen Fahrerquellen."
+      },
+
+      pl: {
+        nav_services:"Usługi",
+        nav_regions:"Regiony",
+        nav_contact:"Kontakt",
+        nav_analysis:"Analiza",
+        nav_faq:"FAQ",
+
+        hero_badge:"TRANSPORT · REKRUTACJA · SIEĆ KONTAKTÓW",
+        hero_text:"Wspieramy firmy transportowe w <strong>rekrutacji kierowców</strong>, budowaniu sieci kontaktów i praktycznych rozwiązaniach operacyjnych.",
+        hero_note:"Praktycznie, konkretnie i bez zbędnej komplikacji.",
+        hero_box_title:"Konkretne wsparcie",
+        hero_box_text:"Dla firm transportowych, które szukają realnych rozwiązań zamiast pustej teorii.",
+
+        action_title:"Potrzebujesz kierowców albo kontaktów w branży transportowej?",
+        action_call:"Zadzwoń",
+        action_contact:"Szybki kontakt",
+        action_analysis:"Darmowa analiza",
+
+        more_btn:"Więcej",
+
+        card1_title:"Rekrutacja kierowców",
+        card1_text:"Wsparcie w szukaniu odpowiednich kierowców.",
+        card1_body1:"Celowe szukanie odpowiednich kandydatów zamiast szerokiego chaosu.",
+        card1_body2:"Uporządkowana wstępna selekcja sensownych profili.",
+        card1_body3:"Praktyczne wsparcie przy pierwszym kontakcie i pierwszych krokach procesu rekrutacji.",
+
+        card2_title:"Sieć kontaktów",
+        card2_text:"Dostęp do istotnych kontaktów branżowych.",
+        card2_body1:"Dostęp do ważnych kontaktów branżowych i odpowiednich osób.",
+        card2_body2:"Celne połączenia zamiast przypadkowych rozwiązań.",
+        card2_body3:"Budowanie sieci z naciskiem na transport, logistykę i międzynarodowe źródła kierowców.",
+
+        card3_title:"Rozwiązania operacyjne",
+        card3_text:"Praktyczne wsparcie w codzienności transportu.",
+        card3_body1:"Analiza wąskich gardeł, procesów i struktur.",
+        card3_body2:"Pragmatyczne rozwiązania dla realnych problemów w codziennej operacji.",
+        card3_body3:"Skupienie na wdrażalnych usprawnieniach zamiast teoretycznych koncepcji.",
+
+        card4_title:"Typowe problemy",
+        card4_text:"Najczęstsze obciążenia w transporcie.",
+        card4_body1:"Brak kierowców i rosnące koszty personelu.",
+        card4_body2:"Duża rotacja, bariery językowe i nieporozumienia w zespole kierowców.",
+        card4_body3:"Szkody na pojazdach, presja organizacyjna i strata czasu przez nieefektywne procesy.",
+
+        card5_title:"Nasza zasada",
+        card5_text:"Praktycznie, konkretnie i z realnym odniesieniem do codzienności.",
+        card5_body1:"Praktyka zamiast teorii – myślimy nie tylko w prezentacjach, ale w realnych procesach.",
+        card5_body2:"Znamy dynamikę pracy z personelem kierowców i wiemy, jak ważna jest jasna komunikacja oraz odpowiednie struktury.",
+        card5_body3:"„Nie tylko doradzamy – pracujemy w procesie.”",
+
+        card6_title:"Doradztwo",
+        card6_text:"Doradztwo dla firm transportowych w Niemczech.",
+        card6_body1:"Branża transportowa stoi dziś przed dużymi wyzwaniami: brak kierowców, rosnące koszty i wysoka rotacja.",
+        card6_body2:"Wiele firm zmaga się dodatkowo z barierami językowymi, szkodami i nieefektywnymi procesami.",
+        card6_body3:"Pomagamy poprawiać struktury, stabilizować procesy i tworzyć praktyczne rozwiązania.",
+
+        card7_title:"Dla kogo pracujemy",
+        card7_text:"Dla firm, które potrzebują praktycznego wsparcia.",
+        card7_body1:"Firmy transportowe, które szukają kierowców i chcą wzmocnić strukturę operacyjną.",
+        card7_body2:"Spedycje, które szukają długofalowych rozwiązań problemów personalnych i organizacyjnych.",
+        card7_body3:"Operatorzy logistyczni, którzy chcą usprawnić procesy i ograniczyć operacyjne wąskie gardła.",
+
+        card8_title:"Jak pracujemy",
+        card8_text:"Jasny i praktyczny przebieg współpracy.",
+        card8_body1:"Pierwsza rozmowa – analizujemy sytuację wyjściową i określamy realne potrzeby.",
+        card8_body2:"Analiza – przyglądamy się personalnym tematom, kontaktom, procesom i operacyjnym wąskim gardłom.",
+        card8_body3:"Wdrożenie – tworzymy pragmatyczne rozwiązanie dopasowane do struktury firmy i działające w praktyce.",
+
+        regions_title:"Regiony",
+        regions_text:"<strong>Działamy na terenie całych Niemiec.</strong> Większe projekty operacyjne przejmujemy preferencyjnie w rejonie Berlina, Lipska i Drezna. Projekty w innych regionach Niemiec oraz w Polsce są również możliwe.",
+        region1_title:"Berlin",
+        region2_title:"Lipsk",
+        region3_title:"Drezno",
+        region4_title:"Polska",
+
+        contact_title:"Kontakt",
+        contact_text:"Szybko, konkretnie i bez komplikacji.",
+        contact_direct:"Kontakt bezpośredni",
+        contact_direct_text:"Telefonicznie, mailowo albo bezpośrednio przez WhatsApp.",
+        contact_scope:"Działamy na terenie całych Niemiec – operacyjnie najbliżej głównie Berlin, Lipsk, Drezno oraz Polska.",
+        contact_form_title:"Szybki kontakt",
+        contact_form_subtitle:"Chcesz napisać bezpośrednio? Użyj formularza kontaktowego.",
+        form_name:"Imię i nazwisko",
+        form_company:"Firma",
+        form_phone:"Telefon",
+        form_email:"E-mail",
+        form_message:"Wiadomość",
+        form_send:"Wyślij wiadomość",
+
+        analysis_title:"Darmowa analiza",
+        analysis_text:"Odpowiedz krótko na kilka pytań – odezwiemy się szybko. 100% poufnie.",
+        analysis_company:"Firma (opcjonalnie – możliwa także anonimowo)",
+        analysis_fleet:"Ile pojazdów ma Twoja firma?",
+        analysis_driver:"Czy macie obecnie problemy z brakiem kierowców?",
+        analysis_problem:"Jakie jest obecnie Wasze największe wyzwanie?",
+        analysis_location:"Gdzie znajduje się Wasza firma?",
+        analysis_name:"Imię i nazwisko",
+        analysis_phone:"Telefon",
+        analysis_email:"E-mail",
+        analysis_message:"Krótko opisz swoją sytuację",
+        analysis_send:"Wyślij darmową analizę",
+
+        faq_title:"Najczęściej zadawane pytania",
+        faq_text:"Krótkie odpowiedzi na typowe pytania dotyczące współpracy.",
+        faq1_q:"Jak działa rekrutacja kierowców?",
+        faq1_a:"Wspieramy firmy transportowe w szukaniu odpowiednich kierowców. Wykorzystujemy do tego naszą sieć kontaktów oraz różne kanały rekrutacyjne w branży.",
+        faq2_q:"Czy działacie tylko w Niemczech?",
+        faq2_a:"Działamy na terenie całych Niemiec. Większe projekty operacyjne przejmujemy głównie w Berlinie, Lipsku i Dreźnie oraz w Polsce.",
+        faq3_q:"Z jakimi firmami współpracujecie?",
+        faq3_a:"Nasze usługi są skierowane przede wszystkim do firm transportowych, spedycji i operatorów logistycznych.",
+        faq4_q:"Jak wygląda współpraca?",
+        faq4_a:"Na początku omawiamy sytuację i wspólnie sprawdzamy, jakie wsparcie będzie najbardziej sensowne.",
+
+        footer_impressum:"Impressum",
+        footer_owner:"Właściciel",
+        footer_contact:"Kontakt",
+        footer_trust:"Działamy na terenie całych Niemiec – z siecią kontaktów w Niemczech, Polsce i międzynarodowych źródłach kierowców."
+      },
+
+      en: {
+        nav_services:"Services",
+        nav_regions:"Regions",
+        nav_contact:"Contact",
+        nav_analysis:"Analysis",
+        nav_faq:"FAQ",
+
+        hero_badge:"TRANSPORT · RECRUITING · NETWORK",
+        hero_text:"We support transport companies with <strong>driver recruiting</strong>, network building and practical operational solutions.",
+        hero_note:"Practical, direct and without unnecessary complexity.",
+        hero_box_title:"Concrete support",
+        hero_box_text:"For transport companies looking for real solutions instead of empty theory.",
+
+        action_title:"Need drivers or contacts in the transport industry?",
+        action_call:"Call",
+        action_contact:"Quick contact",
+        action_analysis:"Free analysis",
+
+        more_btn:"Learn more",
+
+        card1_title:"Driver recruiting",
+        card1_text:"Support in finding suitable drivers.",
+        card1_body1:"Targeted search for suitable candidates instead of broad scatter.",
+        card1_body2:"Structured preselection of relevant profiles.",
+        card1_body3:"Practical support with initial contact and the first steps of the recruiting process.",
+
+        card2_title:"Network and contacts",
+        card2_text:"Access to relevant contacts in the industry.",
+        card2_body1:"Access to important industry contacts and relevant people.",
+        card2_body2:"Targeted connections instead of random solutions.",
+        card2_body3:"Network building with focus on transport, logistics and international driver sources.",
+
+        card3_title:"Operational solutions",
+        card3_text:"Practical support in everyday transport operations.",
+        card3_body1:"Analysis of bottlenecks, workflows and structures.",
+        card3_body2:"Pragmatic solutions for real day-to-day operational problems.",
+        card3_body3:"Focus on implementable improvements instead of theoretical concepts.",
+
+        card4_title:"Typical problems",
+        card4_text:"The most common burdens in transport operations.",
+        card4_body1:"Driver shortage and rising personnel costs.",
+        card4_body2:"High turnover, language barriers and misunderstandings in driver teams.",
+        card4_body3:"Vehicle damage, organisational pressure and time loss caused by inefficient processes.",
+
+        card5_title:"Our principle",
+        card5_text:"Practical, direct and closely linked to real daily work.",
+        card5_body1:"Practice instead of theory – we do not think only in presentations, but in real processes.",
+        card5_body2:"We understand the dynamics of working with drivers and know how important clear communication and suitable structures are.",
+        card5_body3:"“We do not only advise – we work inside the process.”",
+
+        card6_title:"Consulting",
+        card6_text:"Consulting for transport companies in Germany.",
+        card6_body1:"The transport industry is facing major challenges: driver shortages, rising costs and high turnover.",
+        card6_body2:"Many companies additionally struggle with language barriers, damages and inefficient processes.",
+        card6_body3:"We help improve structures, stabilise processes and develop practical solutions.",
+
+        card7_title:"Who we work for",
+        card7_text:"For companies that need practical support.",
+        card7_body1:"Transport companies looking for drivers and wanting to strengthen their operational structure.",
+        card7_body2:"Freight forwarders looking for long-term solutions to staffing and organisational issues.",
+        card7_body3:"Logistics service providers aiming to streamline processes and reduce operational bottlenecks.",
+
+        card8_title:"How we work",
+        card8_text:"A clear and practical workflow.",
+        card8_body1:"Initial conversation – we analyse the starting point and define the actual needs.",
+        card8_body2:"Analysis – we review staffing topics, contacts, workflows and operational bottlenecks.",
+        card8_body3:"Implementation – we develop a pragmatic solution that fits the company structure and works in practice.",
+
+        regions_title:"Regions",
+        regions_text:"<strong>Active throughout Germany.</strong> Larger operational projects are preferably handled in the Berlin, Leipzig and Dresden area. Projects in other regions of Germany and in Poland are also possible.",
+        region1_title:"Berlin",
+        region2_title:"Leipzig",
+        region3_title:"Dresden",
+        region4_title:"Poland",
+
+        contact_title:"Contact",
+        contact_text:"Fast, direct and uncomplicated.",
+        contact_direct:"Direct contact",
+        contact_direct_text:"By phone, email or directly via WhatsApp.",
+        contact_scope:"Active throughout Germany – operational focus especially around Berlin, Leipzig, Dresden and Poland.",
+        contact_form_title:"Quick contact",
+        contact_form_subtitle:"Would you like to write to us directly? Use the contact form.",
+        form_name:"Name",
+        form_company:"Company",
+        form_phone:"Phone",
+        form_email:"Email",
+        form_message:"Message",
+        form_send:"Send message",
+
+        analysis_title:"Free analysis",
+        analysis_text:"Answer a few short questions – we will get back to you quickly. 100% confidential.",
+        analysis_company:"Company (optional – anonymous is also possible)",
+        analysis_fleet:"How many vehicles does your company have?",
+        analysis_driver:"Do you currently have problems with driver shortages?",
+        analysis_problem:"What is currently your biggest challenge?",
+        analysis_location:"Where is your company located?",
+        analysis_name:"Name",
+        analysis_phone:"Phone",
+        analysis_email:"Email",
+        analysis_message:"Briefly describe your situation",
+        analysis_send:"Request free analysis",
+
+        faq_title:"Frequently asked questions",
+        faq_text:"Short answers to common questions about working with us.",
+        faq1_q:"How does driver recruiting work?",
+        faq1_a:"We support transport companies in finding suitable drivers. For this we use our network and various recruiting channels within the industry.",
+        faq2_q:"Do you only work in Germany?",
+        faq2_a:"We work throughout Germany. Larger operational projects are mainly handled in the Berlin, Leipzig and Dresden area as well as in Poland.",
+        faq3_q:"What types of companies do you work with?",
+        faq3_a:"Our services are aimed primarily at transport companies, freight forwarders and logistics service providers.",
+        faq4_q:"How does the cooperation work?",
+        faq4_a:"At the beginning we discuss the situation and jointly assess what kind of support makes the most sense.",
+
+        footer_impressum:"Imprint",
+        footer_owner:"Owner",
+        footer_contact:"Contact",
+        footer_trust:"Active throughout Germany – with a network in Germany, Poland and international driver sources."
+      }
+    };
+
+    function setLang(lang){
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if(translations[lang] && translations[lang][key]){
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`);
+      if(activeBtn) activeBtn.classList.add('active');
+
+      localStorage.setItem('siteLang', lang);
+    }
+
+    const savedLang = localStorage.getItem('siteLang');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if(savedLang && translations[savedLang]){
+        setLang(savedLang);
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
